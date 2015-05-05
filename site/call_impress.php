@@ -19,16 +19,16 @@ fwrite($fp, $xml_original);
 fclose($fp); 
 
 //Paso 2 generar la cadena
-$data = shell_exec('xsltproc _generate/cadenaoriginal_3_2.xslt '.$pathXMLCFDI.' --output _generate/file_'.$idFacturacion.'.txt');
+$data = shell_exec('"C:\XSLTPROC\xsltproc.exe" _generate/cadenaoriginal_3_2.xslt '.$pathXMLCFDI.' --output _generate/file_'.$idFacturacion.'.txt');
 
 //Paso 3 generar archivo .pem
-$key_pem = shell_exec('openssl pkcs8 -inform DET -in _generate/ega100902m13_1403110953s.key -passin pass:MahM7373 -out _generate/key.pem');
+$key_pem = shell_exec('"C:\OpenSSL-Win32\bin\openssl.exe" pkcs8 -inform DET -in _generate/ega100902m13_1403110953s.key -passin pass:MahM7373 -out _generate/key.pem');
 
 //Paso 4 firmar la cadena
-$sign = shell_exec('openssl dgst -sha1 -out _generate/sign_'.$idFacturacion.'.bin -sign _generate/key.pem _generate/file_'.$idFacturacion.'.txt');
+$sign = shell_exec('"C:\OpenSSL-Win32\bin\openssl.exe" dgst -sha1 -out _generate/sign_'.$idFacturacion.'.bin -sign _generate/key.pem _generate/file_'.$idFacturacion.'.txt');
 
 //Paso 5 encriptar sello
-$final_sign = shell_exec('openssl enc -in _generate/sign_'.$idFacturacion.'.bin -a -A -out _generate/signB64_'.$idFacturacion.'.txt');
+$final_sign = shell_exec('"C:\OpenSSL-Win32\bin\openssl.exe" enc -in _generate/sign_'.$idFacturacion.'.bin -a -A -out _generate/signB64_'.$idFacturacion.'.txt');
 
 //Paso 6 leer sello
 $sello_final = file_get_contents('_generate/signB64_'.$idFacturacion.'.txt');
