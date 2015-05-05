@@ -22,11 +22,17 @@ $today = date('Y-m-d');
 $getData = mysql_query("INSERT INTO factura_general (montoTotal, totalLetra, rfc, fechaFactura, notas, pathPDF) 
                                        VALUES ('', '', '$rfcGeneral', '$today', '$noteSale', '')") or die(mysql_error());
 
-$idFacturacion = mysql_insert_id();
+$idFac1 = mysql_insert_id();
+
+
+$selectFact = mysql_query("SELECT idFacturacion FROM operacion_cliente ORDER BY idOperacion DESC LIMIT 1");
+
+$r = mysql_fetch_array($selectFact);
+$idFacturacion = $r['idFacturacion']+1;
 
 foreach ($idSale as $key) {
   
-  $insertOp = mysql_query("INSERT INTO operacion_cliente (numeroOperacion) VALUES ('$key')")or die(mysql_error());
+  $insertOp = mysql_query("INSERT INTO operacion_cliente (numeroOperacion, idFacturacion) VALUES ('$key', '$idFacturacion')")or die(mysql_error());
 
 
    $url = "http://gnuvehicular.mine.nu:8580/ventas_general.php?idventas=$key";

@@ -121,6 +121,9 @@ $addressCustomer = $gnu['calle_gnu'] . " #" . $gnu['numero_gnu'] . ", Colonia " 
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <th>
+                                    <label for="" data-toggle="tooltip" data-placement="top" title="Folio" class="option-tooltip blue strong">FOLIO</label>
+                                </th>
+                                <th>
                                     <label for="" data-toggle="tooltip" data-placement="top" title="ID Taller" class="option-tooltip blue strong">OPERACIÓN</label>
                                 </th>
                                 <th>
@@ -145,8 +148,14 @@ $addressCustomer = $gnu['calle_gnu'] . " #" . $gnu['numero_gnu'] . ", Colonia " 
                                     $fecha     = $array['rows'][$i]['fecha'];
                                     $total     = $array['rows'][$i]['total'];
                                     $id        = $array['rows'][$i]['id'];
+
+                                    $folioGestion = mysql_query("SELECT * FROM operacion_cliente WHERE numeroOperacion = '$operacion'");
+                                    $d = mysql_fetch_array($folioGestion);
                             ?>
                                 <tr class="note">
+                                    <td>
+                                        <?php echo $d['idFacturacion'];?>
+                                    </td>
                                     <td>
                                         <?php echo $operacion;?>
                                     </td>
