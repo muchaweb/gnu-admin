@@ -1,0 +1,262 @@
+/* line 8, ../sass/main.sass */
+.border {
+    border: solid 1px #eeeeee;
+    padding: 5px;
+}
+
+/* line 13, ../sass/main.sass */
+.green {
+    background: #87ba0f;
+    color: white;
+    border: solid 1px #87ba0f;
+}
+
+/* line 18, ../sass/main.sass */
+.green:hover, .green:active {
+    background: #87ba0f !important;
+    color: white !important;
+}
+
+/* line 23, ../sass/main.sass */
+.blue {
+    color: #0270af;
+    font-weight: normal;
+}
+
+/* line 27, ../sass/main.sass */
+.gray {
+    color: white;
+    background: #474747;
+    border: solid 1px #474747;
+}
+
+/* line 32, ../sass/main.sass */
+th {
+    background: #eeeeee;
+}
+
+/* line 35, ../sass/main.sass */
+.search-input {
+    display: inline !important;
+}
+
+/* line 38, ../sass/main.sass */
+.normal {
+    color: #1d1d1d;
+    font-weight: normal;
+}
+
+/* line 42, ../sass/main.sass */
+.space-right {
+    margin-right: 10px;
+}
+
+/* line 45, ../sass/main.sass */
+.space-left {
+    margin-left: 10px;
+}
+
+/* line 48, ../sass/main.sass */
+.push-left {
+    margin-left: 22px;
+}
+
+/* line 51, ../sass/main.sass */
+.right {
+    float: right;
+    margin: 0 !important;
+}
+
+/* line 55, ../sass/main.sass */
+.center {
+    text-align: center;
+}
+
+/* line 58, ../sass/main.sass */
+.logo {
+    display: block;
+}
+
+/* line 61, ../sass/main.sass */
+.header-divisor {
+    border: solid 6px #0270af;
+}
+
+/* line 64, ../sass/main.sass */
+.content-divisor {
+    border-bottom: solid 1px #0270af;
+    position: absolute;
+    top: 296px;
+    z-index: -1;
+    width: 67%;
+}
+
+/* line 71, ../sass/main.sass */
+.title {
+    color: #0270af;
+    font-weight: normal;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+/* line 77, ../sass/main.sass */
+.bottom {
+    margin-bottom: 20px !important;
+}
+
+/* line 80, ../sass/main.sass */
+.top {
+    margin-top: 20px;
+}
+
+/* line 83, ../sass/main.sass */
+.well > p {
+    text-align: center;
+    font-weight: normal;
+}
+
+/* line 87, ../sass/main.sass */
+.panel-heading {
+    background: #87ba0f !important;
+    color: white !important;
+}
+
+/* line 91, ../sass/main.sass */
+.panel-body {
+    display: inline !important;
+}
+
+/* line 94, ../sass/main.sass */
+.form-group > label {
+    font-weight: normal;
+}
+
+/* line 99, ../sass/main.sass */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* line 102, ../sass/main.sass */
+.form-horizontal > .form-group > label {
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
+    text-align: right;
+}
+
+/* line 108, ../sass/main.sass */
+.form-group {
+    margin-right: 5px;
+}
+
+/* line 111, ../sass/main.sass */
+.note {
+    font-size: 13px;
+}
+
+/* line 114, ../sass/main.sass */
+.fa-exclamation-circle {
+    font-size: 40px !important;
+}
+
+/* line 117, ../sass/main.sass */
+.icon {
+    margin-right: 20px;
+}
+
+/* line 120, ../sass/main.sass */
+.fa-plus-circle {
+    font-size: 20px;
+    background: white;
+    color: #0270af;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* line 127, ../sass/main.sass */
+.large {
+    width: 17em;
+}
+
+/*Admin version*/
+.strong {
+    font-weight: bold;
+}
+
+.width-label {
+    width: 25%;
+}
+
+.dataTables_filter, .dataTables_length {
+    display: none;
+}
+
+#number_page > li {
+    display: inline;
+    border: solid 1px #eee;
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    background: #eeeeee;
+}
+
+.size-menu {
+    font-size: 14px;
+}
+
+.alert-custom, .alert-custom:hover {
+    background: #0270af;
+    border: solid 1px #0270af;
+    color: white;
+}
+
+.right-btn {
+    float: right;
+}
+
+.error {
+    float: right;
+    color: red;
+}
+
+.bottom-space {
+    margin-bottom: 80px;
+}
+
+.collapseLink, .collapseLink:hover {
+    text-decoration: none;
+}
+
+.panel-body {
+    border: none !important;
+}
+
+.panel-body > label {
+    margin-left: 10px;
+}
+#loading{
+    float: right;
+}
+.getBill{
+    padding-top: 24px;
+}
+.iframe{
+    display:block; 
+    width:100%!important; 
+    height:100%!important;
+    margin-bottom: 30px;
+}
+
+/*Calendar-widget*/
+.ui-widget-header, #ui-datepicker-div{
+    font-weight: normal !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.mtz-monthpicker-month{
+    cursor: pointer !important;
+}

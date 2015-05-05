@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /css/
+Disallow: /img/
+Disallow: /js/
+Disallow: /lib/
+Disallow: /site/facturas-gnu/
+Disallow: /vendor/
