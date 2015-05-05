@@ -14,10 +14,9 @@ $getFile = mysql_fetch_array($fileBill);
 
 $file = $getFile['pathPDF'];
 
-/*require_once("../lib/mail/class.phpmailer.php");
-require_once("../lib/mail/class.smtp.php");*/
-
-require '../lib/mail/PHPMailerAutoload.php';
+require_once("../lib/mail/class.phpmailer.php");
+require_once("../lib/mail/class.smtp.php");
+//require '../lib/mail/PHPMailerAutoload.php';
 
 if ($comentarios != "") {
     $txt = $comentarios;
