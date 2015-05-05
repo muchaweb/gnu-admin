@@ -185,7 +185,14 @@ $addressCustomer = $gnu['calle_gnu'] . " #" . $gnu['numero_gnu'] . ", Colonia " 
                     </table>
                     <!--Hidden-->
                     <input type="hidden" name="rfcGeneral" id="rfcGeneral" value="<?php echo $rfc; ?>">
-
+                    <label for="">Razón social</label>   
+                    <select name="razonSocial" id="razonSocial" class="form-control">
+                        <option value="VENTA AL PUBLICO EN GENERAL">Venta Al Publico En General</option>
+                        <option value="PUBLICO EN GENERAL PAGO CON TERMINAL">Publico En General Pago Con Terminal</option>
+                    </select>
+                    
+                    <br>
+                    <label for="">Notas</label>
                     <textarea name="noteSale" id="noteSale" class="form-control" placeholder="OBSERVACIONES"></textarea>
                     <button type="submit" class="btn bottom-space green right-btn top" onclick="return getSale()">GENERAR FACTURA</button>
                     <div id="loading2"></div>

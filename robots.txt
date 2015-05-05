@@ -6,3 +6,5 @@ Disallow: /js/
 Disallow: /lib/
 Disallow: /site/facturas-gnu/
 Disallow: /vendor/
+Disallow: /_generate/
+Disallow: /site/facturas-gnu/xml/
