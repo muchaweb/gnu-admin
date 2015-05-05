@@ -21,7 +21,7 @@ $billPDF = '
                     <td align="right">
                         <span class="palid-text text-right strong">Folio</span>
                         <br>
-                         <span class="palid-text text-right">'.$idFolioFactura.'</span>
+                         <span class="palid-text text-right">'.$idFacturacion.'</span>
                     </td>
                 </tr>
 
@@ -77,7 +77,7 @@ $billPDF = '
             </div>           
       </div>
     </div>
-    <div class="line3"></div>
+    <div class="line"></div>
 </div>
 
 <div class="row">

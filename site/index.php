@@ -100,6 +100,20 @@ $addressCustomer = $gnu['calle_gnu'] . " #" . $gnu['numero_gnu'] . ", Colonia " 
                         $json_object = curl_exec($ch);
                         curl_close($ch);
                         $array = json_decode($json_object, true);
+
+                        //--
+                        $url_true = "http://gnuvehicular.mine.nu:8580/ventas_3meses.php?generated=true&operation=$operation&billOperation=$billOperation";
+                        $ch_true = curl_init();
+                        curl_setopt($ch_true, CURLOPT_URL, $url_true);
+                        curl_setopt($ch_true, CURLOPT_RETURNTRANSFER, 1);
+                        curl_setopt($ch_true, CURLOPT_TIMEOUT, 0);
+                        curl_setopt($ch_true, CURLOPT_SSL_VERIFYPEER, false);
+                        $json_object_true = curl_exec($ch_true);
+                        curl_close($ch_true);
+                        $array_true = json_decode($json_object_true, true);
+
+
+                        //--
   
                     $contador = $array['rows'][0]['contador'];
                     
@@ -159,6 +173,9 @@ $addressCustomer = $gnu['calle_gnu'] . " #" . $gnu['numero_gnu'] . ", Colonia " 
                                 $fecha     = $array['rows'][$i]['fecha'];
                                 $total     = $array['rows'][$i]['total'];
                                 $id        = $array['rows'][$i]['id'];
+
+                                $operacion_true = $array_true['rows'][$i]['operacion'];
+
                         ?>
                                 <tr class="note">
                                     <td>

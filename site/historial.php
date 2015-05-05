@@ -152,8 +152,8 @@ include('query-search.php');
                         $montoTotal = $data['montoTotal'];
                         $rfc = $data['rfc'];
                         $fechaFactura = $data['fechaFactura'];
-                        $pathPDF = $data['pathPDF'];
-                        $pathXML = $data['pathXML'];
+                        $pathPDF = 'facturas-gnu/'.$data['pathPDF'];
+                        $pathXML = 'facturas-gnu/xml/'.$data['pathXML'];
                         ?>
                         <tr class="note">
                             <td>

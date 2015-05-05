@@ -105,6 +105,10 @@ $addressCustomer = $gnu['calle_gnu'] . " #" . $gnu['numero_gnu'] . ", Colonia " 
                         curl_close($ch);
                         $array = json_decode($json_object, true);
 
+
+                        //---
+                        //---
+
                     $contador = $array['rows'][0]['contador'];
                     if($contador > 0){ 
                         ?>

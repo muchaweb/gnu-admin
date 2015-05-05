@@ -1,6 +1,4 @@
 <?php 
-echo "success";
-
 set_time_limit(0);
 //--GUARDA TODA LA INFORMACION GENERADA DE LA FACTURACION Y SE GENERA EL PDF CORRESPONDIENTE
 include('../lib/conf.php');
@@ -27,6 +25,9 @@ $getData = mysql_query("INSERT INTO factura_general (montoTotal, totalLetra, rfc
 $idFacturacion = mysql_insert_id();
 
 foreach ($idSale as $key) {
+  
+  $insertOp = mysql_query("INSERT INTO operacion_cliente (numeroOperacion) VALUES ('$key')")or die(mysql_error());
+
 
    $url = "http://gnuvehicular.mine.nu:8580/ventas_general.php?idventas=$key";
    $ch = curl_init();
@@ -99,7 +100,8 @@ foreach ($idSale as $key) {
     //------------------------------------------UPDATE PATH-----------------------------------------------------------
     
     $customPath = 'facturas-gnu/factura_' . $idFacturacion . '.pdf';
-    $updatePath = mysql_query("UPDATE factura_general SET pathXML= '$pathXML', pathPDF = '$customPath' WHERE idFolioFactura = '$idFacturacion'") or die(mysql_error());
+    $namePDF = 'factura_' . $idFacturacion . '.pdf';
+    $updatePath = mysql_query("UPDATE factura_general SET pathXML= '$namexml', pathPDF = '$namePDF' WHERE idFolioFactura = '$idFacturacion'") or die(mysql_error());
 
     //-----------------------------------------DOWNLOAD PDF-----------------------------------------------------------
   

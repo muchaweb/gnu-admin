@@ -7124,7 +7124,7 @@ td.visible-print {
 
 .line{
     border-bottom: solid 2px #676767;
-    margin-top: -160px;
+    margin-top: -150px;
     position: relative;
     z-index: 1000;
 }
